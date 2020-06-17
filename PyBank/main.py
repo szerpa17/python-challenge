@@ -12,6 +12,10 @@ def net_total(profit_list):
     total = sum(profit_list)
     return total
 
+# Average change - calculated by creating a new list and appending 
+# the differences between index + 1 and index to identify the change.
+# This function excludes the last item on the list (as there is no 
+# index + 1 to calculate with).
 def average_change(profit_list):
     change = []
     for index, profit in enumerate(profit_list):
@@ -22,7 +26,19 @@ def average_change(profit_list):
             change.append(change_val)            
     average_change = sum(change)/len(change)
     return average_change
-        
+
+# Greatest increase/decrease - calculated via the use of a conditional
+# in order to assign new values to variables.
+def greatest_incdec(profit_list):
+    g_increase = 0
+    g_decrease = 0
+    for index, profit in enumerate(profit_list):
+        if profit > g_increase:
+            g_increase = profit
+        elif profit < g_decrease:
+            g_decrease = profit
+    return g_increase, g_decrease
+     
 
 # Insert location of csv file to be used for analysis in the file_path variable
 file_path = os.path.join('Resources', 'budget_data.csv')
@@ -54,6 +70,9 @@ with open (file_path, 'r') as csvfile:
         if row[0] == 'Mar-2010':
             break
     
+    print("Financial Analysis")
+    print("----------------------------")
     print(f"Total Months: {total_months(months)}")
     print(f"Total: {net_total(total)}")
     print(f"Average Change: {average_change(total)}")
+    print(f"Greatest increase and greatest decrease {greatest_incdec(total)}")
