@@ -24,11 +24,12 @@ def financial_analysis (month_list, profit_list):
             change.append(change_val)    
         average_change = sum(change)/len(change)        
     # Greatest increase/decrease - calculated via the use of a conditional
-        if profit > g_increase:
-            g_increase = profit
+    for index, value in enumerate(change):
+        if value > g_increase:
+            g_increase = value
             inc_month = month_list[index]
-        if profit < g_decrease:
-            g_decrease = profit
+        if value < g_decrease:
+            g_decrease = value
             dec_month = month_list[index]
     # Reference for currency format: https://stackoverflow.com/questions/320929/currency-formatting-in-python  
     results = ("Financial Analysis" +
@@ -74,4 +75,4 @@ with open (file_path, 'r') as csvfile:
         # if row[0] == 'Mar-2010':
         #     break
     
-    print(financial_analysis(months, total))
+print(financial_analysis(months, total))
