@@ -1,8 +1,8 @@
 import os
 import csv
 
-# Function to return total months, net profit/loss, average change, and
-# the greatest increase/decrease in profits/losses over the whole period.
+# Function to return total months, net profit/loss, average change, greatest 
+# increase/decrease in profits/losses over the whole period.
 def financial_analysis (month_list, profit_list):
     # Total months
     months = len(month_list)
@@ -32,6 +32,7 @@ def financial_analysis (month_list, profit_list):
         if value < g_decrease:
             g_decrease = value
             dec_month = month_list[index]
+    # Reference for currency format: https://stackoverflow.com/questions/320929/currency-formatting-in-python  
     results = ("Financial Analysis" +
                 "\n----------------------------" +
                 "\nTotal Months: " + str(months) +
@@ -42,6 +43,7 @@ def financial_analysis (month_list, profit_list):
                 "\nGreatest Decrease in Profits: " + dec_month + " " +
                 str('${:,.2f}'.format(g_decrease)))
     return results
+    
 
 # Identify csv file location
 file_path = os.path.join('Resources', 'budget_data.csv')
@@ -70,10 +72,12 @@ with open (file_path, 'r') as csvfile:
         total.append(profit)
     
 analysis = financial_analysis(months, total)
-print(analysis)
+print (analysis)
 
 # Export as text file
 output_file = os.path.join("analysis", "output.txt")
+with open(output_file, 'w') as textfile:
+    writer = text.writer(textfile)
+    writer.writelines(analysis)
 
-with open(output_file, 'w') as text:
-    writer = text.write(analysis)
+
