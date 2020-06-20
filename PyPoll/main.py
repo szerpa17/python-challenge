@@ -70,4 +70,6 @@ with open (file_path, 'r') as csvfile:
         # Add values to votes and candidates list
         votes.append(row[0])
         candidates.append(row[2])
-print(election_results(candidates, votes))
+
+analysis = election_results(candidates, votes)
+print (analysis)
