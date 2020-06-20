@@ -73,3 +73,9 @@ with open (file_path, 'r') as csvfile:
 
 analysis = election_results(candidates, votes)
 print (analysis)
+
+# Export as text file
+output_file = os.path.join("analysis", "output.txt")
+
+with open(output_file, 'w') as text:
+    writer = text.write(analysis)
