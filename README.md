@@ -1,5 +1,7 @@
 # Python Challenge
 
+Completed challenge to create Python scripts to analyze financial and voting records and export results as text files.
+
 ## PyBank
 
 * Objective: Create a Python script for analyzing the financial records using financial data from [budget_data.csv](PyBank/Resources/budget_data.csv). The dataset is composed of two columns: `Date` and `Profit/Losses`. 
