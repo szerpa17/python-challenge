@@ -18,17 +18,29 @@
 
 * In addition, the final script is to print the analysis to the terminal and export a text file with the results.
 
-*  As an example, the analysis should look similar to the one below:
+*  Expected Output
 
+    ```text
+    Financial Analysis
+    ----------------------------
+    Total Months: 86
+    Total: $38382578
+    Average  Change: $-2315.12
+    Greatest Increase in Profits: Feb-2012 ($1926159)
+    Greatest Decrease in Profits: Sep-2013 ($-2196167)
+    ```
+
+## Results
+[PyBank Output](https://github.com/szerpa17/python-challenge/blob/master/PyBank/analysis/output.txt)
   ```text
-  Financial Analysis
-  ----------------------------
-  Total Months: 86
-  Total: $38382578
-  Average  Change: $-2315.12
-  Greatest Increase in Profits: Feb-2012 ($1926159)
-  Greatest Decrease in Profits: Sep-2013 ($-2196167)
-  ```
+Financial Analysis
+----------------------------
+Total Months: 86
+Total: $38,382,578.00
+Average Change: $-2,315.12
+Greatest Increase in Profits: Jan-2012 $1,926,159.00
+Greatest Decrease in Profits: Aug-2013 $-2,196,167.00
+```
 
 ## PyPoll
 
@@ -48,7 +60,7 @@
 
 * In addition, the final script is to both print the analysis to the terminal and export a text file with the results.
 
-* As an example, the analysis should look similar to the one below:
+* Expected Output:
 
   ```text
   Election Results
@@ -65,3 +77,18 @@
   ```
 
 ## Results
+[PyPoll Output](https://github.com/szerpa17/python-challenge/blob/master/PyPoll/analysis/output.txt)
+
+```text
+Election Results
+-------------------------
+Total Votes: 3521001
+-------------------------
+Khan: 63.0% (2218231)
+Correy: 20.0% (704200)
+Li: 14.0% (492940)
+O'Tooley: 3.0% (105630)
+-------------------------
+Winner: Khan
+-------------------------
+```
