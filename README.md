@@ -16,10 +16,9 @@
 
   * The greatest decrease in losses (date and amount) over the entire period
 
-
 * In addition, the final script is to print the analysis to the terminal and export a text file with the results.
 
-* Analysis Results: As an example, the analysis should look similar to the one below:
+*  As an example, the analysis should look similar to the one below:
 
   ```text
   Financial Analysis
@@ -31,3 +30,38 @@
   Greatest Decrease in Profits: Sep-2013 ($-2196167)
   ```
 
+## PyPoll
+
+* Objective: Create a Python script to review poll data within the [election_data.csv](PyPoll/Resources/election_data.csv) file. The dataset is composed of three columns: `Voter ID`, `County`, and `Candidate`. 
+
+* The expected output analyzes the records and calculates the following: 
+
+  * The total number of votes cast
+
+  * A complete list of candidates who received votes
+
+  * The percentage of votes each candidate won
+
+  * The total number of votes each candidate won
+
+  * The winner of the election based on popular vote.
+
+* In addition, the final script is to both print the analysis to the terminal and export a text file with the results.
+
+* As an example, the analysis should look similar to the one below:
+
+  ```text
+  Election Results
+  -------------------------
+  Total Votes: 3521001
+  -------------------------
+  Khan: 63.000% (2218231)
+  Correy: 20.000% (704200)
+  Li: 14.000% (492940)
+  O'Tooley: 3.000% (105630)
+  -------------------------
+  Winner: Khan
+  -------------------------
+  ```
+
+## Results
